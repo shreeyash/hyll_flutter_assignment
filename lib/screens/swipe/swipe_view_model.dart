@@ -98,6 +98,13 @@ class SwipeViewModel extends GetxController {
   //and then we can use them to filter the adventures list
   // List<String> likedAdventures = [];
 
+  //savedTags(int index){
+  //  likedAdventures.add(hyllAdventuresModel.value.data![index].tags);
+  // post the likedAdventures to the server
+  // get updated adventures list
+  // print(likedAdventures);
+  //}
+
   // preventing dubilication adventures in the list
   // keep track of the adventures that we already swiped in cache or user-preferance
 

@@ -1,13 +1,12 @@
-import 'dart:math';
-
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:loading_indicator/loading_indicator.dart';
 import 'package:logger/logger.dart';
 import 'package:senior_flutter_challenge/screens/swipe/swipe_view_model.dart';
-import 'package:swipe_cards/draggable_card.dart';
 import 'package:swipe_cards/swipe_cards.dart';
+
+import '../../util/common_widgets/hyll_logo.dart';
 
 class SwipeView extends StatefulWidget {
   static const String routeName = "/swipe";
@@ -40,15 +39,7 @@ class _SwipeViewState extends State<SwipeView> {
         elevation: 0,
         title: Row(
           children: [
-            Text(
-              "HYLL",
-              textDirection: TextDirection.ltr,
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 28,
-                letterSpacing: 1.5,
-              ),
-            ),
+            HyllLogo(),
           ],
         ),
       ),
@@ -112,6 +103,8 @@ class _SwipeViewState extends State<SwipeView> {
   }
 }
 
+
+
 class LodingAdventures extends StatelessWidget {
   const LodingAdventures({
     super.key,
@@ -120,13 +113,13 @@ class LodingAdventures extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
-      children: [
+      children: const [
         Center(
           child: Padding(
-            padding: const EdgeInsets.all(48.0),
+            padding: EdgeInsets.all(48.0),
             child: LoadingIndicator(
                 indicatorType: Indicator.ballScaleMultiple,
-                colors: const [
+                colors: [
                   Color(0xff5A5FFE),
                   Color(0xff6B6FFD),
                   Color(0xff9A99FD),
